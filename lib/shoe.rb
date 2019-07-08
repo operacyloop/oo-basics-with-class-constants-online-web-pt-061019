@@ -12,6 +12,12 @@ BRANDS = []
   #  @brand = brand 
   #  BRANDS << brand
   # end
+  
+     def initialize(brand)
+     @brand = brand
+      BRANDS << brand unless BRANDS.include?(brand)
+      BRANDS == BRANDS.uniq!
+   end
 
   def cobble
     self.condition = "new"
